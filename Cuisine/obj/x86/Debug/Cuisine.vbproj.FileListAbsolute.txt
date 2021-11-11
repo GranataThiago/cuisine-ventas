@@ -11,3 +11,16 @@ E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\
 E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\Cuisine.pdb
 E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.iTicketDelivery.resources
 E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.iTicketMesa.resources
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\Cuisine.exe
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\Cuisine.xml
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\Cuisine.pdb
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\bin\Debug\Cuisine.exe
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\bin\Debug\Cuisine.pdb
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\bin\Debug\Cuisine.xml
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\WindowsApplication1.iTicketDelivery.resources
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\WindowsApplication1.iTicketMesa.resources
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\WindowsApplication1.pDetalleTicket.resources
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\WindowsApplication1.pPedidoTlf.resources
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\WindowsApplication1.pPrincipal.resources
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Usuario\Desktop\Documentos trabajos rita\cuisine-ventas\Cuisine\obj\x86\Debug\Cuisine.vbproj.GenerateResource.Cache
