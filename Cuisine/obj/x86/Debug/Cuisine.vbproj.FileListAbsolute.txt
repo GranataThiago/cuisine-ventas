@@ -1,0 +1,13 @@
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\bin\Debug\Cuisine.exe
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\bin\Debug\Cuisine.pdb
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\bin\Debug\Cuisine.xml
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pDetalleTicket.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pPedidoTlf.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pPrincipal.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.Resources.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\Cuisine.vbproj.GenerateResource.Cache
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\Cuisine.exe
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\Cuisine.xml
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\Cuisine.pdb
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.iTicketDelivery.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.iTicketMesa.resources
