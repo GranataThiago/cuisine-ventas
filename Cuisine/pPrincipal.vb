@@ -72,21 +72,12 @@ Public Class pPrincipal
     End Sub
 
     Private Sub btnPedido_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPedido.Click
-        bandera = False
-        bandera2 = False
-        sql = "insert into pedido values('', null)"
-        Call Ejecutar(sql)
-        If rs.Read = True Then
+        pPedidoTlf.Show()
+    End Sub
 
-        End If
-        bandera2 = False
-        sql = "select max(idPedido) from pedido"
-        Call Ejecutar(sql)
-        While rs2.Read = True
-            pPedidoTlf.idPedido = rs2(0)
-            pPedidoTlf.Show()
-        End While
-
+    Private Sub btnMostrarPedidos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMostrarPedidos.Click
+        Me.Hide()
+        pPedidosActivos.Show()
 
     End Sub
 End Class

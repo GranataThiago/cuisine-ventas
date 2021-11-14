@@ -1,7 +1,7 @@
 ﻿Imports System.Data.Odbc
 Public Class iTicketMesa
 
-    Public idPedido As Integer
+    Public idTicket As Integer
     Private total As Integer
 
     Private Sub cargarPedido()
@@ -11,7 +11,7 @@ Public Class iTicketMesa
         bandera = False
         bandera2 = False
         ds.Tables.Add("detalle_pedido")
-        sql = " select c.nombre, c.precio, dt.cantidad, dt.cantidad * precio from detalle_pedido dt, comida c where dt.idComida = c.idComida and idPedido = '" & idPedido & "';"
+        sql = " select c.nombre, c.precio, dt.cantidad, dt.cantidad * precio from detalle_ticket dt, comida c where dt.idComida = c.idComida and idTicket = '" & idTicket & "';"
         Call consultaGeneral()
         While rs.Read = True
             total += rs(3)

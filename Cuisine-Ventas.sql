@@ -74,13 +74,28 @@ create table detalle_ticket(
 
 /*
 ==========================================================================================================================
+Tablas relacionadas al Delivery
+==========================================================================================================================
+*/
+
+create table repartidor(
+    idRepartidor int auto_increment,
+    idPersona int,
+    constraint pk_idRepartidor primary key (idRepartidor),
+    constraint fk_idPersona3 foreign key (idPersona) references persona(idPersona)
+);
+
+/*
+==========================================================================================================================
 Tablas relacionadas a los pedidos
 ==========================================================================================================================
 */
 
-create table pedido(
+create table pedido (
     idPedido int auto_increment,
+    idRepartidor int,
     direccion varchar(30),
+    entregado boolean,
     constraint pk_idPedido primary key (idPedido)
 );
 
@@ -90,29 +105,7 @@ create table detalle_pedido(
     idComida int,
     cantidad int,
     constraint pk_idDetallePedido primary key (idDetallePedido),
-    constraint fk_idPedido foreign key (idPedido) references pedido(idPedido),
+    constraint fk_idPedido foreign key (idPedido) references pedido(idPedido) ON DELETE CASCADE,
     constraint fk_idComida3 foreign key (idComida) references comida(idComida)
 );
 
-insert into persona values
-('', "Thiago Granata", "Galicia 2074", "1130832071", null),
-('', "Lautaro Trosero", "Av Baigorria y Lope de Vegga", "1130832024", null),
-('', "Miguel Rito", "Boyaca 1575", "1130832072", null);
-
-insert into mesa values
-(''),
-(''),
-('');
-
-insert into encargado values
-('', 1);
-
-insert into caja values
-('', 1);
-
-insert into ticket values
-('', 1, 1, "Efectivo");
-
-insert into comida values
-('', 100, "Hamburguesa"),
-('', 50, "Agua");

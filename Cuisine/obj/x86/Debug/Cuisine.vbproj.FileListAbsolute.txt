@@ -11,3 +11,5 @@ E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\
 E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\Cuisine.pdb
 E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.iTicketDelivery.resources
 E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.iTicketMesa.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pPedidosActivos.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pDetallePedido.resources

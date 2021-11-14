@@ -14,6 +14,16 @@ Public Class pPedidoTlf
         End While
     End Sub
 
+    Private Sub cargarRepartidores()
+        bandera = False
+        bandera2 = False
+        sql = "select nombreApe from persona p, repartidor r where p.idPersona = r.idPersona"
+        Call consultaGeneral()
+        While rs.Read = True
+            cboxRepartidor.Items.Add(rs(0))
+        End While
+    End Sub
+
     Private Sub cargarDetalle()
         If ds.Tables.Contains("detalle_pedido") Then
             ds.Tables.Remove("detalle_pedido")
@@ -46,21 +56,32 @@ Public Class pPedidoTlf
     End Sub
 
     Private Sub pPedidoTlf_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        lblPedido.Text = "Crear Ticket Delivery " & idPedido & ""
+        lblPedido.Text = "Crear Ticket Delivery"
         cargarComidas()
+        cargarRepartidores()
+        btnAgregarComida.Enabled = False
 
     End Sub
 
     Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
-        bandera = False
-        bandera2 = False
-        sql = "update pedido set direccion = '" & tboxDireccion.Text & "' where idPedido = '" & idPedido & "'"
-        Call Ejecutar(sql)
-        If rs.Read = True Then
-
-        End If
         iTicketDelivery.idPedido = idPedido
         iTicketDelivery.Show()
+    End Sub
+
+    Private Sub btnCrearTicket_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCrearTicket.Click
+        bandera = False
+        bandera2 = False
+        sql = "insert into pedido values('', '" & (cboxRepartidor.SelectedIndex + 1) & "', '" & tboxDireccion.Text & "', false)"
+        Call Ejecutar(sql)
+        If rs.Read = False Then
+            sql = "select max(idPedido) from pedido"
+            Call Ejecutar(sql)
+            If rs2.Read = True Then
+                idPedido = rs2(0)
+                btnAgregarComida.Enabled = True
+            End If
+
+        End If
 
     End Sub
 End Class

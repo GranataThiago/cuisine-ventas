@@ -38,7 +38,7 @@ Public Class pDetalleTicket
     Private Sub pDetalleTicket_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         cargarComidas()
         cargarDetalle()
-        lblDetalleTicket.Text = "Detalle Ticket " & idTicket & ""
+        lblDetalleTicket.Text = "Ticket: " & idTicket & ""
     End Sub
 
     Private Sub btnAgregarComida_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarComida.Click
@@ -50,4 +50,16 @@ Public Class pDetalleTicket
         cargarDetalle()
     End Sub
 
+    Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGenerarTicket.Click
+        bandera = False
+        bandera2 = False
+
+        Call Ejecutar(sql)
+        If rs.Read = True Then
+
+        End If
+        iTicketMesa.idTicket = idTicket
+        iTicketMesa.Show()
+
+    End Sub
 End Class

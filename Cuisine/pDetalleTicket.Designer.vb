@@ -23,7 +23,7 @@ Partial Class pDetalleTicket
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnCalcularPrecio = New System.Windows.Forms.Button()
-        Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.btnGenerarTicket = New System.Windows.Forms.Button()
         Me.lblDetalleTicket = New System.Windows.Forms.Label()
         Me.cboxComidas = New System.Windows.Forms.ComboBox()
         Me.btnAgregarComida = New System.Windows.Forms.Button()
@@ -44,14 +44,14 @@ Partial Class pDetalleTicket
         Me.btnCalcularPrecio.Text = "Calcular Precio"
         Me.btnCalcularPrecio.UseVisualStyleBackColor = True
         '
-        'btnImprimir
+        'btnGenerarTicket
         '
-        Me.btnImprimir.Location = New System.Drawing.Point(180, 527)
-        Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(108, 43)
-        Me.btnImprimir.TabIndex = 2
-        Me.btnImprimir.Text = "Imprimir Ticket"
-        Me.btnImprimir.UseVisualStyleBackColor = True
+        Me.btnGenerarTicket.Location = New System.Drawing.Point(180, 527)
+        Me.btnGenerarTicket.Name = "btnGenerarTicket"
+        Me.btnGenerarTicket.Size = New System.Drawing.Size(108, 43)
+        Me.btnGenerarTicket.TabIndex = 2
+        Me.btnGenerarTicket.Text = "Generar Ticket"
+        Me.btnGenerarTicket.UseVisualStyleBackColor = True
         '
         'lblDetalleTicket
         '
@@ -59,9 +59,9 @@ Partial Class pDetalleTicket
         Me.lblDetalleTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!)
         Me.lblDetalleTicket.Location = New System.Drawing.Point(123, 32)
         Me.lblDetalleTicket.Name = "lblDetalleTicket"
-        Me.lblDetalleTicket.Size = New System.Drawing.Size(228, 39)
+        Me.lblDetalleTicket.Size = New System.Drawing.Size(130, 39)
         Me.lblDetalleTicket.TabIndex = 3
-        Me.lblDetalleTicket.Text = "Detalle Ticket"
+        Me.lblDetalleTicket.Text = "Ticket: "
         '
         'cboxComidas
         '
@@ -109,6 +109,7 @@ Partial Class pDetalleTicket
         '
         'dgvDetalle
         '
+        Me.dgvDetalle.AllowUserToAddRows = False
         Me.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDetalle.Location = New System.Drawing.Point(12, 98)
         Me.dgvDetalle.Name = "dgvDetalle"
@@ -127,7 +128,7 @@ Partial Class pDetalleTicket
         Me.Controls.Add(Me.btnAgregarComida)
         Me.Controls.Add(Me.cboxComidas)
         Me.Controls.Add(Me.lblDetalleTicket)
-        Me.Controls.Add(Me.btnImprimir)
+        Me.Controls.Add(Me.btnGenerarTicket)
         Me.Controls.Add(Me.btnCalcularPrecio)
         Me.Name = "pDetalleTicket"
         Me.Text = "Cuisine Ticket"
@@ -138,7 +139,7 @@ Partial Class pDetalleTicket
 
     End Sub
     Friend WithEvents btnCalcularPrecio As System.Windows.Forms.Button
-    Friend WithEvents btnImprimir As System.Windows.Forms.Button
+    Friend WithEvents btnGenerarTicket As System.Windows.Forms.Button
     Friend WithEvents lblDetalleTicket As System.Windows.Forms.Label
     Friend WithEvents cboxComidas As System.Windows.Forms.ComboBox
     Friend WithEvents btnAgregarComida As System.Windows.Forms.Button
