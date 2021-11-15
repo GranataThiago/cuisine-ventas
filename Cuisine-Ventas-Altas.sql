@@ -9,10 +9,20 @@ insert into persona values
 ('', "Lionel Andrés", "Gaona 2912", "1130832077", null),
 ('', "Andrea Lozano", "Terrero 1372", "11428496", null);
 
+insert into cliente values
+('', 4);
+
 insert into mesa values
 (''),
 (''),
 ('');
+
+insert into horario values
+('', '20:00hs'),
+('', '21:00hs'),
+('', '22:00hs'),
+('', '23:00hs');
+
 
 insert into encargado values
 ('', 1),
@@ -23,7 +33,7 @@ insert into caja values
 ('', 2);
 
 insert into ticket values
-('', 1, 1, "Efectivo");
+('');
 
 insert into comida values
 ('', 350, "Hamburguesa"),

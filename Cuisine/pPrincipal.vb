@@ -11,29 +11,34 @@ Public Class pPrincipal
             MsgBox("Conexión satisfactoria", , "Cuisine Ventas")
         Catch ex As Exception
             MsgBox("La conexion ha fallado", , "Cuisine Ventas")
+            Me.Close()
 
+            Application.Exit()
+
+            End
 
         End Try
     End Sub
 
     Private Sub cargarTickets()
-        If ds.Tables.Contains("ticket") Then
-            ds.Tables.Remove("ticket")
+        If ds.Tables.Contains("pedido_local") Then
+            ds.Tables.Remove("pedido_local")
         End If
         bandera = False
         bandera2 = False
-        ds.Tables.Add("ticket")
-        sql = "select idTicket, idMesa, metodoPago from ticket"
+        ds.Tables.Add("pedido_local")
+        sql = "select idTicket, idPedidoLocal, idMesa, metodoPago from pedido_local"
         Call consultaGeneral()
         While rs.Read = True
 
         End While
         Call consultaGeneral()
         adp = New OdbcDataAdapter(sql, cnn)
-        adp.Fill(ds.Tables("ticket"))
-        Me.dgvMesas.DataSource = ds.Tables("ticket")
-        Me.dgvMesas.Columns("idTicket").HeaderText = "ID Ticket"
-        Me.dgvMesas.Columns("idMesa").HeaderText = "ID Mesa"
+        adp.Fill(ds.Tables("pedido_local"))
+        Me.dgvMesas.DataSource = ds.Tables("pedido_local")
+        Me.dgvMesas.Columns("idTicket").HeaderText = "Nro Ticket"
+        Me.dgvMesas.Columns("idPedidoLocal").HeaderText = "Nro Pedido"
+        Me.dgvMesas.Columns("idMesa").HeaderText = "Mesa Nro"
         Me.dgvMesas.Columns("metodoPago").HeaderText = "Metodo Pago"
     End Sub
 
@@ -53,11 +58,19 @@ Public Class pPrincipal
     End Sub
 
     Private Sub btnCrearTicket_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCrearTicket.Click
-        sql = "insert into ticket values('', '" & cboxMesas.SelectedItem & "', '1', 'Efectivo')"
-        Call Ejecutar(sql)
-        If rs.Read = True Then
+        bandera = False
+        bandera2 = False
 
+        sql = "insert into ticket values('')"
+        Call Ejecutar(sql)
+        If rs.Read = False Then
+            sql = "insert into pedido_local values('', (select max(idTicket) from ticket), '" & cboxMesas.SelectedItem & "', '1', 'Efectivo')"
+            Call Ejecutar(sql)
+            If rs.Read = True Then
+
+            End If
         End If
+
         cargarTickets()
     End Sub
 
@@ -80,4 +93,13 @@ Public Class pPrincipal
         pPedidosActivos.Show()
 
     End Sub
+
+    Private Sub btnReservar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReservar.Click
+        pReservarMesa.Show()
+    End Sub
+
+    Private Sub btnMostrarReservas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMostrarReservas.Click
+        pMostrarReservas.show()
+    End Sub
+
 End Class

@@ -25,21 +25,21 @@ Public Class pPedidoTlf
     End Sub
 
     Private Sub cargarDetalle()
-        If ds.Tables.Contains("detalle_pedido") Then
-            ds.Tables.Remove("detalle_pedido")
+        If ds.Tables.Contains("detalle_ticket") Then
+            ds.Tables.Remove("detalle_ticket")
         End If
         bandera = False
         bandera2 = False
-        ds.Tables.Add("detalle_pedido")
-        sql = " select c.nombre, c.precio, dt.cantidad, dt.cantidad * precio from detalle_pedido dt, comida c where dt.idComida = c.idComida and idPedido = '" & idPedido & "';"
+        ds.Tables.Add("detalle_ticket")
+        sql = " select c.nombre, c.precio, dt.cantidad, dt.cantidad * precio from detalle_ticket dt, comida c where dt.idComida = c.idComida and idTicket = '" & idPedido & "';"
         Call consultaGeneral()
         While rs.Read = True
 
         End While
         Call consultaGeneral()
         adp = New OdbcDataAdapter(sql, cnn)
-        adp.Fill(ds.Tables("detalle_pedido"))
-        Me.dgvDetalle.DataSource = ds.Tables("detalle_pedido")
+        adp.Fill(ds.Tables("detalle_ticket"))
+        Me.dgvDetalle.DataSource = ds.Tables("detalle_ticket")
         Me.dgvDetalle.Columns("nombre").HeaderText = "Comida"
         Me.dgvDetalle.Columns("cantidad").HeaderText = "Cantidad"
         Me.dgvDetalle.Columns("precio").HeaderText = "Precio"
@@ -47,7 +47,7 @@ Public Class pPedidoTlf
     End Sub
 
     Private Sub btnAgregarComida_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarComida.Click
-        sql = "insert into detalle_pedido values ('', '" & idPedido & "' ,'" & (cboxComidas.SelectedIndex + 1) & "', '" & nCantidad.Value & "')"
+        sql = "insert into detalle_ticket values ('', '" & idPedido & "' ,'" & (cboxComidas.SelectedIndex + 1) & "', '" & nCantidad.Value & "')"
         Call Ejecutar(sql)
         If rs.Read = True Then
 
@@ -64,23 +64,27 @@ Public Class pPedidoTlf
     End Sub
 
     Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
-        iTicketDelivery.idPedido = idPedido
-        iTicketDelivery.Show()
+        iTicketMesa.idTicket = idPedido
+        iTicketMesa.Show()
     End Sub
 
     Private Sub btnCrearTicket_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCrearTicket.Click
         bandera = False
         bandera2 = False
-        sql = "insert into pedido values('', '" & (cboxRepartidor.SelectedIndex + 1) & "', '" & tboxDireccion.Text & "', false)"
+        sql = "insert into ticket values('')"
         Call Ejecutar(sql)
         If rs.Read = False Then
-            sql = "select max(idPedido) from pedido"
+            sql = "insert into pedido values('', (select max(idTicket) from ticket), '" & (cboxRepartidor.SelectedIndex + 1) & "', '" & tboxDireccion.Text & "', false)"
             Call Ejecutar(sql)
-            If rs2.Read = True Then
-                idPedido = rs2(0)
-                btnAgregarComida.Enabled = True
+            If rs2.Read = False Then
+                sql = "(select max(idTicket) from ticket)"
+                Call Ejecutar2(sql)
+                If rs3.Read = True Then
+                    idPedido = rs3(0)
+                    btnAgregarComida.Enabled = True
+                End If
+ 
             End If
-
         End If
 
     End Sub

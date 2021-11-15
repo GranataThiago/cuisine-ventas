@@ -24,13 +24,15 @@ Partial Class pPrincipal
     Private Sub InitializeComponent()
         Me.btnCrearTicket = New System.Windows.Forms.Button()
         Me.cboxMesas = New System.Windows.Forms.ComboBox()
-        Me.lblTickets = New System.Windows.Forms.Label()
+        Me.lblPedidosLocales = New System.Windows.Forms.Label()
         Me.dgvMesas = New System.Windows.Forms.DataGridView()
         Me.btnDetalleTicket = New System.Windows.Forms.Button()
         Me.btnPedido = New System.Windows.Forms.Button()
         Me.lblNroMesa = New System.Windows.Forms.Label()
         Me.btnMostrarPedidos = New System.Windows.Forms.Button()
         Me.gboxTicket = New System.Windows.Forms.GroupBox()
+        Me.btnReservar = New System.Windows.Forms.Button()
+        Me.btnMostrarReservas = New System.Windows.Forms.Button()
         CType(Me.dgvMesas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,7 +42,7 @@ Partial Class pPrincipal
         Me.btnCrearTicket.Name = "btnCrearTicket"
         Me.btnCrearTicket.Size = New System.Drawing.Size(181, 52)
         Me.btnCrearTicket.TabIndex = 0
-        Me.btnCrearTicket.Text = "Crear Ticket"
+        Me.btnCrearTicket.Text = "Abrir Mesa"
         Me.btnCrearTicket.UseVisualStyleBackColor = True
         '
         'cboxMesas
@@ -52,26 +54,26 @@ Partial Class pPrincipal
         Me.cboxMesas.Size = New System.Drawing.Size(181, 41)
         Me.cboxMesas.TabIndex = 1
         '
-        'lblTickets
+        'lblPedidosLocales
         '
-        Me.lblTickets.AutoSize = True
-        Me.lblTickets.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!)
-        Me.lblTickets.Location = New System.Drawing.Point(377, 27)
-        Me.lblTickets.Name = "lblTickets"
-        Me.lblTickets.Size = New System.Drawing.Size(266, 39)
-        Me.lblTickets.TabIndex = 2
-        Me.lblTickets.Text = "Tickets Abiertos"
+        Me.lblPedidosLocales.AutoSize = True
+        Me.lblPedidosLocales.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!)
+        Me.lblPedidosLocales.Location = New System.Drawing.Point(360, 30)
+        Me.lblPedidosLocales.Name = "lblPedidosLocales"
+        Me.lblPedidosLocales.Size = New System.Drawing.Size(387, 39)
+        Me.lblPedidosLocales.TabIndex = 2
+        Me.lblPedidosLocales.Text = "Pedidos en Restaurante"
         '
         'dgvMesas
         '
         Me.dgvMesas.AllowUserToAddRows = False
         Me.dgvMesas.AllowUserToDeleteRows = False
         Me.dgvMesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMesas.Location = New System.Drawing.Point(260, 83)
+        Me.dgvMesas.Location = New System.Drawing.Point(256, 83)
         Me.dgvMesas.MultiSelect = False
         Me.dgvMesas.Name = "dgvMesas"
         Me.dgvMesas.ReadOnly = True
-        Me.dgvMesas.Size = New System.Drawing.Size(530, 368)
+        Me.dgvMesas.Size = New System.Drawing.Size(606, 368)
         Me.dgvMesas.TabIndex = 3
         '
         'btnDetalleTicket
@@ -120,17 +122,37 @@ Partial Class pPrincipal
         Me.gboxTicket.TabStop = False
         Me.gboxTicket.Text = "Crear Ticket"
         '
+        'btnReservar
+        '
+        Me.btnReservar.Location = New System.Drawing.Point(22, 499)
+        Me.btnReservar.Name = "btnReservar"
+        Me.btnReservar.Size = New System.Drawing.Size(181, 52)
+        Me.btnReservar.TabIndex = 10
+        Me.btnReservar.Text = "Reservar mesa"
+        Me.btnReservar.UseVisualStyleBackColor = True
+        '
+        'btnMostrarReservas
+        '
+        Me.btnMostrarReservas.Location = New System.Drawing.Point(256, 499)
+        Me.btnMostrarReservas.Name = "btnMostrarReservas"
+        Me.btnMostrarReservas.Size = New System.Drawing.Size(181, 52)
+        Me.btnMostrarReservas.TabIndex = 11
+        Me.btnMostrarReservas.Text = "Mostrar Reservas"
+        Me.btnMostrarReservas.UseVisualStyleBackColor = True
+        '
         'pPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(819, 481)
+        Me.ClientSize = New System.Drawing.Size(923, 580)
+        Me.Controls.Add(Me.btnMostrarReservas)
+        Me.Controls.Add(Me.btnReservar)
         Me.Controls.Add(Me.btnMostrarPedidos)
         Me.Controls.Add(Me.lblNroMesa)
         Me.Controls.Add(Me.btnPedido)
         Me.Controls.Add(Me.btnDetalleTicket)
         Me.Controls.Add(Me.dgvMesas)
-        Me.Controls.Add(Me.lblTickets)
+        Me.Controls.Add(Me.lblPedidosLocales)
         Me.Controls.Add(Me.cboxMesas)
         Me.Controls.Add(Me.btnCrearTicket)
         Me.Controls.Add(Me.gboxTicket)
@@ -143,12 +165,14 @@ Partial Class pPrincipal
     End Sub
     Friend WithEvents btnCrearTicket As System.Windows.Forms.Button
     Friend WithEvents cboxMesas As System.Windows.Forms.ComboBox
-    Friend WithEvents lblTickets As System.Windows.Forms.Label
+    Friend WithEvents lblPedidosLocales As System.Windows.Forms.Label
     Friend WithEvents dgvMesas As System.Windows.Forms.DataGridView
     Friend WithEvents btnDetalleTicket As System.Windows.Forms.Button
     Friend WithEvents btnPedido As System.Windows.Forms.Button
     Friend WithEvents lblNroMesa As System.Windows.Forms.Label
     Friend WithEvents btnMostrarPedidos As System.Windows.Forms.Button
     Friend WithEvents gboxTicket As System.Windows.Forms.GroupBox
+    Friend WithEvents btnReservar As System.Windows.Forms.Button
+    Friend WithEvents btnMostrarReservas As System.Windows.Forms.Button
 
 End Class

@@ -9,7 +9,6 @@ Module cnxBd
     Public adp As New OdbcDataAdapter
     Public ds2 As New DataSet
     Public adp2 As New OdbcDataAdapter
-    Public fechaCobros As Date
 
 
     Public Function Ejecutar(ByVal sql As String)

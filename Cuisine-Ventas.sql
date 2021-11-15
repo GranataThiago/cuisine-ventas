@@ -4,9 +4,9 @@ use Cuisine;
 
 create table persona(
     idPersona int auto_increment,
-    nombreApe varchar(60),
+    nombreApe varchar(60) not null,
     direccion varchar(40),
-    telefono varchar(30),
+    telefono varchar(30) not null,
     fecha_nac date,
     constraint pk_idPersona primary key (idPersona)
 );
@@ -32,6 +32,31 @@ create table caja(
     constraint fk_idEncargado foreign key (idEncargado) references encargado(idEncargado)
 );
 
+
+create table comida(
+    idComida int auto_increment,
+    precio int,
+    nombre varchar(30),
+    constraint pk_idComida primary key (idComida)
+);
+
+
+create table ticket(
+    idTicket int auto_increment,
+    constraint pk_idTicket primary key (idTicket)
+);
+
+
+create table detalle_ticket(
+    idDetalleTicket int auto_increment,
+    idTicket int,
+    idComida int,
+    cantidad int,
+    constraint pk_idDetalleTicket primary key (idDetalleTicket),
+    constraint fk_idTicket foreign key (idTicket) references ticket(idTicket),
+    constraint fk_idComida2 foreign key (idComida) references comida(idComida)
+);
+
 /*
 ==========================================================================================================================
 Tablas relacionadas a la atención por mostrador (mesas)
@@ -44,32 +69,37 @@ create table mesa(
     constraint pk_idMesa primary key (idMesa)
 );
 
+create table horario(
+    idHorario int auto_increment,
+    hora varchar(20),
+    constraint pk_idHorario primary key (idHorario)
+);
+
+
+create table reserva(
+    idReserva int auto_increment,
+    idMesa int,
+    idCliente int,
+    fecha date,
+    idHorario int,
+    constraint pk_idReserva primary key (idReserva),
+    constraint fk_idMesa2 foreign key (idMesa) references mesa(idMesa),
+    constraint fk_idCliente foreign key (idCliente) references cliente(idCliente),
+    constraint fk_idHorario foreign key (idHorario) references horario(idHorario)
+);
+
+
 /* Si el metodo de pago es efectivo o tarjeta, por ejemplo */
-create table ticket(
-    idTicket int auto_increment,
+create table pedido_local(
+    idPedidoLocal int auto_increment,
+    idTicket int,
     idMesa int,
     idCaja int,
     metodoPago varchar(30),
-    constraint pk_idTicket primary key (idTicket),
+    constraint pk_idPedidoLocal primary key (idPedidoLocal),
     constraint fk_idMesa foreign key (idMesa) references mesa(idMesa),
-    constraint fk_idCaja3 foreign key (idCaja) references caja(idCaja)
-);
-
-create table comida(
-    idComida int auto_increment,
-    precio int,
-    nombre varchar(30),
-    constraint pk_idComida primary key (idComida)
-);
-
-create table detalle_ticket(
-    idDetalleTicket int auto_increment,
-    idTicket int,
-    idComida int,
-    cantidad int,
-    constraint pk_idDetalleTicket primary key (idDetalleTicket),
-    constraint fk_idTicket2 foreign key (idTicket) references ticket(idTicket),
-    constraint fk_idComida2 foreign key (idComida) references comida(idComida)
+    constraint fk_idCaja3 foreign key (idCaja) references caja(idCaja),
+    constraint fk_idTicket4 foreign key (idTicket) references ticket(idTicket)
 );
 
 /*
@@ -85,21 +115,18 @@ create table repartidor(
     constraint fk_idPersona3 foreign key (idPersona) references persona(idPersona)
 );
 
-/*
-==========================================================================================================================
-Tablas relacionadas a los pedidos
-==========================================================================================================================
-*/
 
 create table pedido (
     idPedido int auto_increment,
+    idTicket int,
     idRepartidor int,
     direccion varchar(30),
     entregado boolean,
-    constraint pk_idPedido primary key (idPedido)
+    constraint pk_idPedido primary key (idPedido),
+    constraint fk_idTicket3 foreign key (idTicket) references ticket(idTicket)
 );
 
-create table detalle_pedido(
+/* create table detalle_pedido(
     idDetallePedido int auto_increment,
     idPedido int,
     idComida int,
@@ -107,5 +134,5 @@ create table detalle_pedido(
     constraint pk_idDetallePedido primary key (idDetallePedido),
     constraint fk_idPedido foreign key (idPedido) references pedido(idPedido) ON DELETE CASCADE,
     constraint fk_idComida3 foreign key (idComida) references comida(idComida)
-);
+); */
 
