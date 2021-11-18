@@ -56,7 +56,7 @@
         idHorario = (cboxHorarios.SelectedIndex + 1)
         fechaSeleccionada = cFecha.SelectionRange.Start.Date.ToString("yyyy-MM-dd")
 
-        sql = "select COUNT(*) from reserva where idHorario = " & idHorario & " AND fecha = '" & fechaSeleccionada & "';"
+        sql = "select COUNT(*) from reserva where idHorario = " & idHorario & " AND fecha = '" & fechaSeleccionada & "' AND idReserva <> " & idReserva & ";"
         Call Ejecutar(sql)
         If rs.Read = True Then
             If rs(0) = 0 Then

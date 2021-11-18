@@ -102,4 +102,24 @@ Public Class pPrincipal
         pMostrarReservas.show()
     End Sub
 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        pInicial.Show()
+
+    End Sub
+
+    Private Sub gboxTicket_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gboxTicket.Enter
+
+    End Sub
+
+    Private Sub cboxMesas_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboxMesas.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub lblNroMesa_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblNroMesa.Click
+
+    End Sub
+
+    Private Sub dgvMesas_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvMesas.CellContentClick
+
+    End Sub
 End Class

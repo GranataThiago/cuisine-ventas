@@ -5,13 +5,13 @@ Public Class pDetallePedido
     Public idPedido As Integer
 
     Private Sub cargarDetalle()
-        If ds.Tables.Contains("detalle_pedido") Then
+        If ds.Tables.Contains("detalle_ticket") Then
             ds.Tables.Remove("detalle_pedido")
         End If
         bandera = False
         bandera2 = False
         ds.Tables.Add("detalle_pedido")
-        sql = " select c.nombre, c.precio, dt.cantidad, dt.cantidad * precio from detalle_pedido dt, comida c where dt.idComida = c.idComida and idPedido = '" & idPedido & "';"
+        sql = " select c.nombre, c.precio, dt.cantidad, dt.cantidad * precio from detalle_ticket dt, comida c where dt.idComida = c.idComida and idTicket = '" & idPedido & "';"
         Call consultaGeneral()
         While rs.Read = True
 

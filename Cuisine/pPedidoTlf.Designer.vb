@@ -28,7 +28,6 @@ Partial Class pPedidoTlf
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.btnAgregarComida = New System.Windows.Forms.Button()
         Me.cboxComidas = New System.Windows.Forms.ComboBox()
-        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.dgvDetalle = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lblNombreCliente = New System.Windows.Forms.Label()
@@ -38,15 +37,17 @@ Partial Class pPedidoTlf
         Me.cboxRepartidor = New System.Windows.Forms.ComboBox()
         Me.btnCrearTicket = New System.Windows.Forms.Button()
         Me.gboxTicket = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.nCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblPedido
         '
         Me.lblPedido.AutoSize = True
         Me.lblPedido.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!)
-        Me.lblPedido.Location = New System.Drawing.Point(123, 22)
+        Me.lblPedido.Location = New System.Drawing.Point(152, 34)
         Me.lblPedido.Name = "lblPedido"
         Me.lblPedido.Size = New System.Drawing.Size(343, 39)
         Me.lblPedido.TabIndex = 4
@@ -55,7 +56,7 @@ Partial Class pPedidoTlf
         'nCantidad
         '
         Me.nCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.nCantidad.Location = New System.Drawing.Point(416, 408)
+        Me.nCantidad.Location = New System.Drawing.Point(416, 417)
         Me.nCantidad.Name = "nCantidad"
         Me.nCantidad.Size = New System.Drawing.Size(132, 32)
         Me.nCantidad.TabIndex = 14
@@ -63,7 +64,7 @@ Partial Class pPedidoTlf
         'lblCantidad
         '
         Me.lblCantidad.AutoSize = True
-        Me.lblCantidad.Location = New System.Drawing.Point(420, 388)
+        Me.lblCantidad.Location = New System.Drawing.Point(420, 397)
         Me.lblCantidad.Name = "lblCantidad"
         Me.lblCantidad.Size = New System.Drawing.Size(49, 13)
         Me.lblCantidad.TabIndex = 13
@@ -72,7 +73,7 @@ Partial Class pPedidoTlf
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
-        Me.lblNombre.Location = New System.Drawing.Point(422, 326)
+        Me.lblNombre.Location = New System.Drawing.Point(422, 335)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(42, 13)
         Me.lblNombre.TabIndex = 12
@@ -80,7 +81,8 @@ Partial Class pPedidoTlf
         '
         'btnAgregarComida
         '
-        Me.btnAgregarComida.Location = New System.Drawing.Point(416, 446)
+        Me.btnAgregarComida.ForeColor = System.Drawing.Color.Black
+        Me.btnAgregarComida.Location = New System.Drawing.Point(416, 455)
         Me.btnAgregarComida.Name = "btnAgregarComida"
         Me.btnAgregarComida.Size = New System.Drawing.Size(132, 43)
         Me.btnAgregarComida.TabIndex = 11
@@ -91,32 +93,23 @@ Partial Class pPedidoTlf
         '
         Me.cboxComidas.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.cboxComidas.FormattingEnabled = True
-        Me.cboxComidas.Location = New System.Drawing.Point(416, 345)
+        Me.cboxComidas.Location = New System.Drawing.Point(416, 354)
         Me.cboxComidas.Name = "cboxComidas"
         Me.cboxComidas.Size = New System.Drawing.Size(132, 33)
         Me.cboxComidas.TabIndex = 10
-        '
-        'btnImprimir
-        '
-        Me.btnImprimir.Location = New System.Drawing.Point(106, 513)
-        Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(108, 43)
-        Me.btnImprimir.TabIndex = 15
-        Me.btnImprimir.Text = "Generar Ticket"
-        Me.btnImprimir.UseVisualStyleBackColor = True
         '
         'dgvDetalle
         '
         Me.dgvDetalle.AllowUserToAddRows = False
         Me.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDetalle.Location = New System.Drawing.Point(24, 84)
+        Me.dgvDetalle.Location = New System.Drawing.Point(24, 93)
         Me.dgvDetalle.Name = "dgvDetalle"
         Me.dgvDetalle.Size = New System.Drawing.Size(290, 405)
         Me.dgvDetalle.TabIndex = 16
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(374, 121)
+        Me.TextBox1.Location = New System.Drawing.Point(374, 130)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(213, 20)
         Me.TextBox1.TabIndex = 17
@@ -124,7 +117,7 @@ Partial Class pPedidoTlf
         'lblNombreCliente
         '
         Me.lblNombreCliente.AutoSize = True
-        Me.lblNombreCliente.Location = New System.Drawing.Point(385, 105)
+        Me.lblNombreCliente.Location = New System.Drawing.Point(385, 114)
         Me.lblNombreCliente.Name = "lblNombreCliente"
         Me.lblNombreCliente.Size = New System.Drawing.Size(79, 13)
         Me.lblNombreCliente.TabIndex = 18
@@ -133,7 +126,7 @@ Partial Class pPedidoTlf
         'lblDirCliente
         '
         Me.lblDirCliente.AutoSize = True
-        Me.lblDirCliente.Location = New System.Drawing.Point(385, 157)
+        Me.lblDirCliente.Location = New System.Drawing.Point(385, 166)
         Me.lblDirCliente.Name = "lblDirCliente"
         Me.lblDirCliente.Size = New System.Drawing.Size(107, 13)
         Me.lblDirCliente.TabIndex = 20
@@ -141,7 +134,7 @@ Partial Class pPedidoTlf
         '
         'tboxDireccion
         '
-        Me.tboxDireccion.Location = New System.Drawing.Point(374, 173)
+        Me.tboxDireccion.Location = New System.Drawing.Point(374, 182)
         Me.tboxDireccion.Name = "tboxDireccion"
         Me.tboxDireccion.Size = New System.Drawing.Size(213, 20)
         Me.tboxDireccion.TabIndex = 19
@@ -149,7 +142,7 @@ Partial Class pPedidoTlf
         'lblRepartidor
         '
         Me.lblRepartidor.AutoSize = True
-        Me.lblRepartidor.Location = New System.Drawing.Point(385, 215)
+        Me.lblRepartidor.Location = New System.Drawing.Point(385, 224)
         Me.lblRepartidor.Name = "lblRepartidor"
         Me.lblRepartidor.Size = New System.Drawing.Size(110, 13)
         Me.lblRepartidor.TabIndex = 22
@@ -158,14 +151,15 @@ Partial Class pPedidoTlf
         'cboxRepartidor
         '
         Me.cboxRepartidor.FormattingEnabled = True
-        Me.cboxRepartidor.Location = New System.Drawing.Point(374, 232)
+        Me.cboxRepartidor.Location = New System.Drawing.Point(374, 241)
         Me.cboxRepartidor.Name = "cboxRepartidor"
         Me.cboxRepartidor.Size = New System.Drawing.Size(213, 21)
         Me.cboxRepartidor.TabIndex = 23
         '
         'btnCrearTicket
         '
-        Me.btnCrearTicket.Location = New System.Drawing.Point(414, 264)
+        Me.btnCrearTicket.ForeColor = System.Drawing.Color.Black
+        Me.btnCrearTicket.Location = New System.Drawing.Point(414, 273)
         Me.btnCrearTicket.Name = "btnCrearTicket"
         Me.btnCrearTicket.Size = New System.Drawing.Size(132, 43)
         Me.btnCrearTicket.TabIndex = 24
@@ -174,18 +168,29 @@ Partial Class pPedidoTlf
         '
         'gboxTicket
         '
-        Me.gboxTicket.Location = New System.Drawing.Point(346, 84)
+        Me.gboxTicket.Location = New System.Drawing.Point(346, 93)
         Me.gboxTicket.Name = "gboxTicket"
         Me.gboxTicket.Size = New System.Drawing.Size(269, 239)
         Me.gboxTicket.TabIndex = 25
         Me.gboxTicket.TabStop = False
         Me.gboxTicket.Text = "Crear Ticket"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources.flecha_hacia_atras__1_
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 24)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(69, 63)
+        Me.PictureBox1.TabIndex = 28
+        Me.PictureBox1.TabStop = False
+        '
         'pPedidoTlf
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(627, 568)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCrearTicket)
         Me.Controls.Add(Me.cboxRepartidor)
         Me.Controls.Add(Me.lblRepartidor)
@@ -194,7 +199,6 @@ Partial Class pPedidoTlf
         Me.Controls.Add(Me.lblNombreCliente)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.dgvDetalle)
-        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.nCantidad)
         Me.Controls.Add(Me.lblCantidad)
         Me.Controls.Add(Me.lblNombre)
@@ -202,10 +206,12 @@ Partial Class pPedidoTlf
         Me.Controls.Add(Me.cboxComidas)
         Me.Controls.Add(Me.lblPedido)
         Me.Controls.Add(Me.gboxTicket)
+        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Name = "pPedidoTlf"
         Me.Text = "Cuisine"
         CType(Me.nCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -216,7 +222,6 @@ Partial Class pPedidoTlf
     Friend WithEvents lblNombre As System.Windows.Forms.Label
     Friend WithEvents btnAgregarComida As System.Windows.Forms.Button
     Friend WithEvents cboxComidas As System.Windows.Forms.ComboBox
-    Friend WithEvents btnImprimir As System.Windows.Forms.Button
     Friend WithEvents dgvDetalle As System.Windows.Forms.DataGridView
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents lblNombreCliente As System.Windows.Forms.Label
@@ -226,4 +231,5 @@ Partial Class pPedidoTlf
     Friend WithEvents cboxRepartidor As System.Windows.Forms.ComboBox
     Friend WithEvents btnCrearTicket As System.Windows.Forms.Button
     Friend WithEvents gboxTicket As System.Windows.Forms.GroupBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

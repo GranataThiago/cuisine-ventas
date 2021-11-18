@@ -63,7 +63,7 @@ Public Class pPedidoTlf
 
     End Sub
 
-    Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
+    Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         iTicketMesa.idTicket = idPedido
         iTicketMesa.Show()
     End Sub
@@ -86,6 +86,15 @@ Public Class pPedidoTlf
  
             End If
         End If
+        pPedidos.cargarPedidosActivos()
+    End Sub
+
+    Private Sub gboxTicket_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gboxTicket.Enter
+
+    End Sub
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        Me.Close()
 
     End Sub
 End Class

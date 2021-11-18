@@ -13,6 +13,8 @@
             End If
         End If
         pReservarMesa.cargarClientes()
+        Me.Hide()
+
     End Sub
 
 

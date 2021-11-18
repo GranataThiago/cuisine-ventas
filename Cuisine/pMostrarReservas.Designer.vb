@@ -45,6 +45,7 @@ Partial Class pMostrarReservas
         '
         Me.lblReservas.AutoSize = True
         Me.lblReservas.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!)
+        Me.lblReservas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblReservas.Location = New System.Drawing.Point(261, 47)
         Me.lblReservas.Name = "lblReservas"
         Me.lblReservas.Size = New System.Drawing.Size(284, 39)
@@ -73,11 +74,13 @@ Partial Class pMostrarReservas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(805, 582)
         Me.Controls.Add(Me.btnModificarReserva)
         Me.Controls.Add(Me.btnCancelarReserva)
         Me.Controls.Add(Me.lblReservas)
         Me.Controls.Add(Me.dgvReservas)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "pMostrarReservas"
         Me.Text = "Cuisine"
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).EndInit()

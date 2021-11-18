@@ -60,6 +60,7 @@ Partial Class pModificarReserva
         '
         Me.lblModificar.AutoSize = True
         Me.lblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!)
+        Me.lblModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblModificar.Location = New System.Drawing.Point(136, 31)
         Me.lblModificar.Name = "lblModificar"
         Me.lblModificar.Size = New System.Drawing.Size(298, 39)
@@ -97,6 +98,7 @@ Partial Class pModificarReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(559, 490)
         Me.Controls.Add(Me.cboxMesas)
         Me.Controls.Add(Me.tboxNombre)

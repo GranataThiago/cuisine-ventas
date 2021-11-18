@@ -37,7 +37,7 @@ Partial Class pReservarMesa
         '
         'btnReservar
         '
-        Me.btnReservar.Location = New System.Drawing.Point(216, 541)
+        Me.btnReservar.Location = New System.Drawing.Point(242, 541)
         Me.btnReservar.Name = "btnReservar"
         Me.btnReservar.Size = New System.Drawing.Size(151, 59)
         Me.btnReservar.TabIndex = 0
@@ -48,7 +48,8 @@ Partial Class pReservarMesa
         '
         Me.lblReservar.AutoSize = True
         Me.lblReservar.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!)
-        Me.lblReservar.Location = New System.Drawing.Point(154, 27)
+        Me.lblReservar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lblReservar.Location = New System.Drawing.Point(177, 58)
         Me.lblReservar.Name = "lblReservar"
         Me.lblReservar.Size = New System.Drawing.Size(254, 39)
         Me.lblReservar.TabIndex = 3
@@ -84,6 +85,7 @@ Partial Class pReservarMesa
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(33, 127)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
@@ -93,6 +95,7 @@ Partial Class pReservarMesa
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(291, 223)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(33, 13)
@@ -102,6 +105,7 @@ Partial Class pReservarMesa
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(33, 223)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(41, 13)
@@ -120,6 +124,7 @@ Partial Class pReservarMesa
         'lblFecha
         '
         Me.lblFecha.AutoSize = True
+        Me.lblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblFecha.Location = New System.Drawing.Point(43, 326)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(37, 13)
@@ -137,6 +142,7 @@ Partial Class pReservarMesa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(611, 624)
         Me.Controls.Add(Me.cFecha)
         Me.Controls.Add(Me.lblFecha)
@@ -149,6 +155,7 @@ Partial Class pReservarMesa
         Me.Controls.Add(Me.cboxClientes)
         Me.Controls.Add(Me.lblReservar)
         Me.Controls.Add(Me.btnReservar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "pReservarMesa"
         Me.Text = "Cuisine"
         Me.ResumeLayout(False)

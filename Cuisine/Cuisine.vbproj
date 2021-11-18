@@ -73,6 +73,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pMesas.Designer.vb">
+      <DependentUpon>pMesas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pMesas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pInicial.Designer.vb">
+      <DependentUpon>pInicial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pInicial.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="pModificarReserva.Designer.vb">
       <DependentUpon>pModificarReserva.vb</DependentUpon>
     </Compile>
@@ -89,6 +101,12 @@
       <DependentUpon>pAgregarCliente.vb</DependentUpon>
     </Compile>
     <Compile Include="pAgregarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pPedidos.Designer.vb">
+      <DependentUpon>pPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pPedidos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="pReservarMesa.Designer.vb">
@@ -158,6 +176,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="pMesas.resx">
+      <DependentUpon>pMesas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pInicial.resx">
+      <DependentUpon>pInicial.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pModificarReserva.resx">
       <DependentUpon>pModificarReserva.vb</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pMostrarReservas.resx">
       <DependentUpon>pMostrarReservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pPedidos.resx">
+      <DependentUpon>pPedidos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pPedidosActivos.resx">
       <DependentUpon>pPedidosActivos.vb</DependentUpon>
@@ -208,6 +235,30 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repartidor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repartidor %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repartidor %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurante %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurante %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cuisine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CuisineV2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-hacia-atras %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

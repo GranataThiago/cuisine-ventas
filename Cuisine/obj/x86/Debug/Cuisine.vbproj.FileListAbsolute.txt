@@ -17,3 +17,6 @@ E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\
 E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pAgregarCliente.resources
 E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pMostrarReservas.resources
 E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pModificarReserva.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pInicial.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pMesas.resources
+E:\Estudio\6to\Analisis y Desarrollo de Sistemas\Cuisine Ventas\Cuisine\Cuisine\obj\x86\Debug\WindowsApplication1.pPedidos.resources

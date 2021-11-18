@@ -26,6 +26,7 @@
     End Sub
 
     Public Sub cargarClientes()
+        cboxClientes.Items.Clear()
         bandera = False
         bandera2 = False
         sql = "select nombreApe from persona p, cliente c where p.idPersona = c.idPersona"

@@ -22,7 +22,6 @@ Partial Class pDetalleTicket
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnCalcularPrecio = New System.Windows.Forms.Button()
         Me.btnGenerarTicket = New System.Windows.Forms.Button()
         Me.lblDetalleTicket = New System.Windows.Forms.Label()
         Me.cboxComidas = New System.Windows.Forms.ComboBox()
@@ -35,18 +34,9 @@ Partial Class pDetalleTicket
         CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnCalcularPrecio
-        '
-        Me.btnCalcularPrecio.Location = New System.Drawing.Point(33, 527)
-        Me.btnCalcularPrecio.Name = "btnCalcularPrecio"
-        Me.btnCalcularPrecio.Size = New System.Drawing.Size(108, 43)
-        Me.btnCalcularPrecio.TabIndex = 1
-        Me.btnCalcularPrecio.Text = "Calcular Precio"
-        Me.btnCalcularPrecio.UseVisualStyleBackColor = True
-        '
         'btnGenerarTicket
         '
-        Me.btnGenerarTicket.Location = New System.Drawing.Point(180, 527)
+        Me.btnGenerarTicket.Location = New System.Drawing.Point(121, 524)
         Me.btnGenerarTicket.Name = "btnGenerarTicket"
         Me.btnGenerarTicket.Size = New System.Drawing.Size(108, 43)
         Me.btnGenerarTicket.TabIndex = 2
@@ -57,6 +47,7 @@ Partial Class pDetalleTicket
         '
         Me.lblDetalleTicket.AutoSize = True
         Me.lblDetalleTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!)
+        Me.lblDetalleTicket.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblDetalleTicket.Location = New System.Drawing.Point(123, 32)
         Me.lblDetalleTicket.Name = "lblDetalleTicket"
         Me.lblDetalleTicket.Size = New System.Drawing.Size(130, 39)
@@ -84,6 +75,7 @@ Partial Class pDetalleTicket
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
+        Me.lblNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblNombre.Location = New System.Drawing.Point(348, 98)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(42, 13)
@@ -93,6 +85,7 @@ Partial Class pDetalleTicket
         'lblCantidad
         '
         Me.lblCantidad.AutoSize = True
+        Me.lblCantidad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblCantidad.Location = New System.Drawing.Point(346, 160)
         Me.lblCantidad.Name = "lblCantidad"
         Me.lblCantidad.Size = New System.Drawing.Size(49, 13)
@@ -120,6 +113,7 @@ Partial Class pDetalleTicket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(486, 595)
         Me.Controls.Add(Me.dgvDetalle)
         Me.Controls.Add(Me.nCantidad)
@@ -129,7 +123,6 @@ Partial Class pDetalleTicket
         Me.Controls.Add(Me.cboxComidas)
         Me.Controls.Add(Me.lblDetalleTicket)
         Me.Controls.Add(Me.btnGenerarTicket)
-        Me.Controls.Add(Me.btnCalcularPrecio)
         Me.Name = "pDetalleTicket"
         Me.Text = "Cuisine Ticket"
         CType(Me.nCantidad, System.ComponentModel.ISupportInitialize).EndInit()
@@ -138,7 +131,6 @@ Partial Class pDetalleTicket
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnCalcularPrecio As System.Windows.Forms.Button
     Friend WithEvents btnGenerarTicket As System.Windows.Forms.Button
     Friend WithEvents lblDetalleTicket As System.Windows.Forms.Label
     Friend WithEvents cboxComidas As System.Windows.Forms.ComboBox
