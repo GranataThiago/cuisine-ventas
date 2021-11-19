@@ -27,6 +27,8 @@ Public Class pMesas
     End Sub
 
     Private Sub cargarMesas()
+        bandera = False
+        bandera2 = False
         sql = "select idMesa from mesa"
         Call consultaGeneral()
         While rs.Read = True
@@ -76,5 +78,14 @@ Public Class pMesas
         Me.Close()
         pInicial.Show()
 
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCerrarTicket.Click
+        i = dgvMesas.CurrentRow.Index
+        idTicket = dgvMesas.Item(1, i).Value.ToString()
+
+        sql = "delete from pedido_local where idPedidoLocal = " & idTicket
+        Call Ejecutar(sql)
+        cargarTickets()
     End Sub
 End Class

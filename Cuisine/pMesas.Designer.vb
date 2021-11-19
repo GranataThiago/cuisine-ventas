@@ -32,6 +32,7 @@ Partial Class pMesas
         Me.gboxTicket = New System.Windows.Forms.GroupBox()
         Me.lblPedidosLocales = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnCerrarTicket = New System.Windows.Forms.Button()
         CType(Me.dgvMesas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,12 +49,12 @@ Partial Class pMesas
         Me.dgvMesas.Name = "dgvMesas"
         Me.dgvMesas.ReadOnly = True
         Me.dgvMesas.RowHeadersWidth = 128
-        Me.dgvMesas.Size = New System.Drawing.Size(795, 423)
+        Me.dgvMesas.Size = New System.Drawing.Size(795, 378)
         Me.dgvMesas.TabIndex = 4
         '
         'btnMostrarReservas
         '
-        Me.btnMostrarReservas.Location = New System.Drawing.Point(54, 426)
+        Me.btnMostrarReservas.Location = New System.Drawing.Point(54, 475)
         Me.btnMostrarReservas.Name = "btnMostrarReservas"
         Me.btnMostrarReservas.Size = New System.Drawing.Size(221, 64)
         Me.btnMostrarReservas.TabIndex = 18
@@ -62,7 +63,7 @@ Partial Class pMesas
         '
         'btnReservar
         '
-        Me.btnReservar.Location = New System.Drawing.Point(54, 506)
+        Me.btnReservar.Location = New System.Drawing.Point(54, 557)
         Me.btnReservar.Name = "btnReservar"
         Me.btnReservar.Size = New System.Drawing.Size(221, 64)
         Me.btnReservar.TabIndex = 17
@@ -82,7 +83,7 @@ Partial Class pMesas
         '
         'btnDetalleTicket
         '
-        Me.btnDetalleTicket.Location = New System.Drawing.Point(54, 342)
+        Me.btnDetalleTicket.Location = New System.Drawing.Point(54, 322)
         Me.btnDetalleTicket.Name = "btnDetalleTicket"
         Me.btnDetalleTicket.Size = New System.Drawing.Size(221, 64)
         Me.btnDetalleTicket.TabIndex = 14
@@ -93,14 +94,14 @@ Partial Class pMesas
         '
         Me.cboxMesas.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboxMesas.FormattingEnabled = True
-        Me.cboxMesas.Location = New System.Drawing.Point(54, 190)
+        Me.cboxMesas.Location = New System.Drawing.Point(54, 176)
         Me.cboxMesas.Name = "cboxMesas"
         Me.cboxMesas.Size = New System.Drawing.Size(221, 41)
         Me.cboxMesas.TabIndex = 13
         '
         'btnCrearTicket
         '
-        Me.btnCrearTicket.Location = New System.Drawing.Point(54, 254)
+        Me.btnCrearTicket.Location = New System.Drawing.Point(54, 240)
         Me.btnCrearTicket.Name = "btnCrearTicket"
         Me.btnCrearTicket.Size = New System.Drawing.Size(221, 64)
         Me.btnCrearTicket.TabIndex = 12
@@ -110,7 +111,7 @@ Partial Class pMesas
         'gboxTicket
         '
         Me.gboxTicket.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.gboxTicket.Location = New System.Drawing.Point(44, 148)
+        Me.gboxTicket.Location = New System.Drawing.Point(44, 134)
         Me.gboxTicket.Name = "gboxTicket"
         Me.gboxTicket.Size = New System.Drawing.Size(240, 182)
         Me.gboxTicket.TabIndex = 16
@@ -122,7 +123,7 @@ Partial Class pMesas
         Me.lblPedidosLocales.AutoSize = True
         Me.lblPedidosLocales.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!)
         Me.lblPedidosLocales.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblPedidosLocales.Location = New System.Drawing.Point(363, 51)
+        Me.lblPedidosLocales.Location = New System.Drawing.Point(365, 38)
         Me.lblPedidosLocales.Name = "lblPedidosLocales"
         Me.lblPedidosLocales.Size = New System.Drawing.Size(665, 55)
         Me.lblPedidosLocales.TabIndex = 19
@@ -131,18 +132,28 @@ Partial Class pMesas
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources.flecha_hacia_atras__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(44, 51)
+        Me.PictureBox1.Location = New System.Drawing.Point(44, 38)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(69, 63)
         Me.PictureBox1.TabIndex = 28
         Me.PictureBox1.TabStop = False
+        '
+        'btnCerrarTicket
+        '
+        Me.btnCerrarTicket.Location = New System.Drawing.Point(54, 397)
+        Me.btnCerrarTicket.Name = "btnCerrarTicket"
+        Me.btnCerrarTicket.Size = New System.Drawing.Size(221, 64)
+        Me.btnCerrarTicket.TabIndex = 29
+        Me.btnCerrarTicket.Text = "Cerrar Ticket"
+        Me.btnCerrarTicket.UseVisualStyleBackColor = True
         '
         'pMesas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1257, 621)
+        Me.ClientSize = New System.Drawing.Size(1257, 646)
+        Me.Controls.Add(Me.btnCerrarTicket)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblPedidosLocales)
         Me.Controls.Add(Me.btnMostrarReservas)
@@ -172,4 +183,5 @@ Partial Class pMesas
     Friend WithEvents gboxTicket As System.Windows.Forms.GroupBox
     Friend WithEvents lblPedidosLocales As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents btnCerrarTicket As System.Windows.Forms.Button
 End Class
